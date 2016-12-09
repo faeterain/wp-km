@@ -163,3 +163,78 @@ if ( !function_exists('kingsmen_entry_header')){
     <?php
     }
 }
+
+// Tao entry meta lay du lieu tu post
+
+if ( !function_exists('kingsmen_entry_meta')){
+    function kingsmen_entry_meta()
+    {?>
+        <?php if( !is_page() ) : ?>
+            <div class="entry-meta">
+                <?php
+                    printf(__('<span class="author">Posted by %1$s </span>', 'kingsmen'), get_the_author());
+                    printf(__('<span class="date-published">at %1$s </span>', 'kingsmen'), get_the_date());
+                    printf(__('<span class="category">in %1$s </span>', 'kingsmen'), get_the_category_list( ', ' ));
+
+                    if ( comments_open() ) : 
+                        echo '<span class="meta-reply">';
+                            comments_popup_link( 
+                                __('Leave a comment', 'kingsmen'),
+                                __('One comment', 'kingsmen'),
+                                __('% comments', 'kingsmen'),
+                                __('Read all comments', 'kingsmen')
+                             );
+                        echo '</span>';
+                    endif;
+                ?>
+            </div>    
+        <?php endif ?>
+    <?php
+    }
+}
+
+// Tao post content lay noi dung cua post
+
+if ( !function_exists('kingsmen_entry_content')){
+    function kingsmen_entry_content()
+    {?>
+        <?php if( !is_single() && !is_page() ) : 
+            the_excerpt();
+            else:
+            the_content();
+            
+            // Phan trang trong single
+            $link_pages = array(
+                'before' => __('<p>Page: ', 'kingsmen'),
+                'after' => '</p>',
+                'nextpagelink' => __('Next Page: ', 'kingsmen'),
+                'previouspagelink' => __('Previous Page: ', 'kingsmen')
+            );
+            wp_link_pages( $link_pages );
+        endif ?>
+    <?php
+    }
+}
+
+
+if ( !function_exists('kingsmen_readmore')){
+    function kingsmen_readmore()
+    {
+        return '<a href="'.get_permalink( get_the_ID() ).'" class="read-more">'.__('...[Read More]','kingsmen').'</a>';
+    }
+}
+add_filter( 'excerpt_more', 'kingsmen_readmore' );
+
+
+// Hien thi tag 
+
+if ( !function_exists('kingsmen_entry_tag')){
+    function kingsmen_entry_tag()
+    {
+        if ( has_tag() ) :
+            echo '<div class="entry-tag">';
+            printf(__('Tagged in %1$s', 'kingsmen'), get_the_tag_list( '', ', ' ));
+            echo '</div>';
+        endif;
+    }
+}
