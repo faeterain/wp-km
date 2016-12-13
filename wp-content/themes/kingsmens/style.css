@@ -14,3 +14,39 @@ Languages Folder: /languages
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+
+/************************** GLOBAL STYLE **************************/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #0B0B0B;
+    color: #ccc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.page.content {
+    width: 700px;
+    padding: 0 0 0 244px;
+    box-sizing: content-box;
+}
+
+.page #main-content {
+    background-color: #000;
+}

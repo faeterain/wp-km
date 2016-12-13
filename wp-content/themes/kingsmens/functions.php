@@ -158,7 +158,7 @@ if ( !function_exists('kingsmen_entry_header')){
         <?php if( is_single() ) : ?>
             <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
         <?php else: ?>
-            <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+            <h2><?php the_title(); ?></h2>
         <?php endif ?>
     <?php
     }
@@ -238,3 +238,23 @@ if ( !function_exists('kingsmen_entry_tag')){
         endif;
     }
 }
+
+/********************* Nhung file style.css *********************/
+
+function kingsmen_style()
+{
+    wp_register_style( 'main-style', get_template_directory_uri()."/style.css", 'all' );
+    wp_enqueue_style( 'main-style' );
+    wp_register_style( 'reset', get_template_directory_uri()."/css/reset.css", 'all' );
+    wp_enqueue_style( 'reset' );
+    wp_register_style( 'menu', get_template_directory_uri()."/css/menu.css", 'all' );
+    wp_enqueue_style( 'menu' );
+    wp_enqueue_style( 'reset' );
+    wp_register_style( 'publication', get_template_directory_uri()."/css/publication.css", 'all' );
+    wp_enqueue_style( 'publication' );
+    wp_enqueue_style( 'reset' );
+    wp_register_style( 'font', get_template_directory_uri()."/css/font.css", 'all' );
+    wp_enqueue_style( 'font' );
+}
+
+add_action( 'wp_enqueue_scripts', 'kingsmen_style' );

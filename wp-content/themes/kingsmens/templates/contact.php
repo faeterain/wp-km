@@ -4,7 +4,7 @@
     */
 ?>
 <?php get_header(  ) ?>
-<div class="content">
+<div class="page content" class="page content">
     <div id="main-content">
         <div class="contant-info">
             <h4>Contact Address</h4>

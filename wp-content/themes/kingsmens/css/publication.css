@@ -1,0 +1,33 @@
+.publication tr {
+    background-color: #161616;
+}
+
+.publication td {
+    padding: 10px;
+}
+
+.tab_date {
+    font: 11px 'QuicksandBook', Arial, sans-serif;
+    color: #cc3333;
+}
+
+.tab_desc {
+    font: 12px 'QuicksandBook', Arial, sans-serif;
+}
+
+.tab_dl {
+    font: 12px 'QuicksandBook', Arial, sans-serif;
+    color: #cc3333;
+    text-align: right;
+}
+
+h2 {
+    font: 24px "QuicksandBook", "open sans", Arial, sans-serif;
+    margin: 0;
+}
+
+.entry-header {
+    padding: 40px 5px 12px 10px;
+    box-sizing: content-box;
+    background-color: #181818;
+}

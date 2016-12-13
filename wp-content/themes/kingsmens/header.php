@@ -12,7 +12,7 @@
         <div id="container">
         <div class="logo">
             <?php  
-                kingsmen_header();
+                // kingsmen_header();
                 kingsmen_menu('primary-menu');
             ?>
         </div>
