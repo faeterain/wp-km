@@ -1,5 +1,5 @@
 <?php get_header(  ) ?>
-<div class="content">
+<div class="content page">
     <div id="main-content">
         <div class="archive-title">
             <?php
@@ -30,9 +30,6 @@
             <?php get_template_part( 'content', 'none' ); ?>
         <?php endif; ?>
 
-    </div>
-    <div id="sidebar">
-        <?php get_sidebar(); ?>
     </div>
 </div>
 <?php get_footer() ?>

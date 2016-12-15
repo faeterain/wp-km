@@ -1,3 +1,8 @@
+table.publication {
+    border-top: 1px dashed #333;
+    padding-top: 2px;
+}
+
 .publication tr {
     background-color: #161616;
 }
@@ -17,17 +22,31 @@
 
 .tab_dl {
     font: 12px 'QuicksandBook', Arial, sans-serif;
-    color: #cc3333;
     text-align: right;
+}
+
+.tab_dl a {
+    color: #cc3333;
 }
 
 h2 {
     font: 24px "QuicksandBook", "open sans", Arial, sans-serif;
     margin: 0;
+    color: #fff;
 }
 
 .entry-header {
     padding: 40px 5px 12px 10px;
     box-sizing: content-box;
     background-color: #181818;
+}
+
+.download-brochure {
+    padding-bottom: 8px;
+    font: 13px 'QuicksandBook', Arial, sans-serif;
+    text-align: right;
+}
+
+.download-brochure a {
+    color: #cc3333;
 }

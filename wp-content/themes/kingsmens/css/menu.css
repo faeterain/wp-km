@@ -3,7 +3,7 @@
     z-index: 999;
     top: 50px;
     right: 20px;
-    background: rgba(11, 11, 11, 0.83);
+    background: rgba(0, 0, 0, 0.83)
 }
 
 .primary-menu ul {
@@ -41,7 +41,7 @@
 
 .primary-menu>ul>li>.sub-menu {
     display: none;
-    min-height: 248px;
+    min-height: 169px;
     right: 234px;
     position: fixed;
     top: 50px;
@@ -50,7 +50,7 @@
 
 .primary-menu>ul>li>.sub-menu li>.sub-menu {
     display: none;
-    min-height: 248px;
+    min-height: 169px;
     right: 448px;
     position: fixed;
     top: 50px;

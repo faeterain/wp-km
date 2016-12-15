@@ -140,7 +140,7 @@ if ( !function_exists('kingsmen_pagination')){
 if ( !function_exists('kingsmen_thumbnail')){
     function kingsmen_thumbnail($size)
     {
-        if ( is_single() && has_post_thumbnail() && !post_password_required() || has_post_format( 'image' )) :
+        if ( has_post_thumbnail() && !post_password_required() || has_post_format( 'image' )) :
         ?>
         <figure class="post-thumbnail">
             <?php the_post_thumbnail( $size ); ?>
@@ -156,15 +156,37 @@ if ( !function_exists('kingsmen_entry_header')){
     function kingsmen_entry_header()
     {?>
         <?php if( is_single() ) : ?>
-            <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+            <div class="entry-header">
+                <h2><?php the_title(); ?></h2>
+            </div>
         <?php else: ?>
-            <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+            <div class="entry-header">
+                <h2><?php the_title(); ?></h2>
+            </div>
+        <?php endif ?>
+    <?php
+    }
+}
+
+// Teo entry datepost
+
+
+if ( !function_exists('kingsmen_entry_datepost')){
+    function kingsmen_entry_datepost()
+    {?>
+        <?php if( !is_page() ) : ?>
+            <div class="entry-meta">
+                <?php
+                    printf(__('<span class="date-published"> %1$s </span>', 'kingsmen'), get_the_date());
+                ?>
+            </div>    
         <?php endif ?>
     <?php
     }
 }
 
 // Tao entry meta lay du lieu tu post
+
 
 if ( !function_exists('kingsmen_entry_meta')){
     function kingsmen_entry_meta()
@@ -223,7 +245,7 @@ if ( !function_exists('kingsmen_readmore')){
         return '<a href="'.get_permalink( get_the_ID() ).'" class="read-more">'.__('...[Read More]','kingsmen').'</a>';
     }
 }
-add_filter( 'excerpt_more', 'kingsmen_readmore' );
+// add_filter( 'excerpt_more', 'kingsmen_readmore' );
 
 
 // Hien thi tag 
