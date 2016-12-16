@@ -89,28 +89,33 @@ h4 a {
 
 /**** POST STYLE ****/
 
-#index article.post a {
+#index article.post a,
+#index article.page a {
     float: left;
     width: 100%;
     height: 100%;
 }
 
-.post {
+.post,
+#index .page {
     overflow: hidden;
     padding: 20px;
     margin: 10px 0 0;
     background: #000;
 }
 
-#index article.post:hover {
+#index article.post:hover,
+#index article.page:hover {
     background: #210505;
 }
 
-#index article.post:hover .entry-header h2 {
+#index article.post:hover .entry-header h2,
+#index article.page:hover .entry-header h2 {
     color: #fff;
 }
 
-.post .entry-header {
+.post .entry-header,
+#index .page .entry-header {
     font: 12px "QuicksandBook", "open sans", Arial, sans-serif;
     padding: 15px 0 0 0;
 }
@@ -129,18 +134,21 @@ h4 a {
     font: 12px "QuicksandBook", "open sans", Arial, sans-serif;
 }
 
-.post .entry-thumbnail {
+.post .entry-thumbnail,
+#index .page .entry-thumbnail {
     width: 123px;
     float: left;
     border: 1px solid #333;
     margin: 0 12px 0 0;
 }
 
-.post .post-thumbnail {
+.post .post-thumbnail,
+#index .page .post-thumbnail {
     margin: 0;
 }
 
-.post .entry-content {
+.post .entry-content,
+#index .page .entry-content {
     text-align: justify;
 }
 
