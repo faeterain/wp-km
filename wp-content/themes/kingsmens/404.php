@@ -1,9 +1,9 @@
 <?php get_header(  ) ?>
 <div class="content page">
-    <div id="main-content">
+    <div id="notfound">
         <?php
-            _e('<h1>Opps!</h1>', 'kingsmen');
-            _e('<h2>404 NOT FOUND</h2>', 'kingsmen');
+            _e('<div class="content-notfound"><h1>Opps!</h1>', 'kingsmen');
+            _e('<h2>404 NOT FOUND</h2></div>', 'kingsmen');
             get_search_form();
 
             // _e('<h3>Content categories: </h3>', 'kingsmen');

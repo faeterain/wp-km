@@ -4,4 +4,62 @@
     background: #2f2f2f;
     font-size: 20px;
     padding: 5px 20px;
+    margin-top: 4px;
+}
+
+.latest-news {
+    display: none;
+}
+
+.km-list {
+    list-style: none;
+    background: #232323;
+    margin: 0;
+    padding: 5px 20px;
+}
+
+.km-list li:not(:first-child) {
+    background: rgba(0, 0, 0, 0) url(../img/dotted.png) no-repeat scroll left center;
+}
+
+.km-list li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    font-size: 12px;
+}
+
+.km-list li a {
+    display: block;
+}
+
+.km-list li:first-child a {
+    font-family: "Noto Sans", helvetica, sans-serif;
+    color: #ae3333;
+    font-size: 16px;
+}
+
+.km-list li:not(:first-child) a {
+    padding: 5px 20px;
+}
+
+.km-list .latest-title {
+    padding: 5px 0;
+}
+
+.km-list li:first-child .latest-title {
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.km-list figure {
+    margin: 0px;
+}
+
+.km-list .content {
+    color: #e0e0e0;
+    font-size: 10px;
+}
+
+.km-list .date-post {
+    font-style: italic;
 }

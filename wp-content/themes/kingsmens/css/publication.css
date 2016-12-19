@@ -35,7 +35,8 @@ h2 {
     color: #fff;
 }
 
-.entry-header {
+.entry-header,
+.archive-title {
     padding: 40px 5px 12px 10px;
     box-sizing: content-box;
     background-color: #181818;
@@ -49,4 +50,15 @@ h2 {
 
 .download-brochure a {
     color: #cc3333;
+}
+
+.detail-gallery-header .post {
+    padding: 20px 0;
+}
+
+.detail-gallery-header .post .entry-header {
+    text-align: center;
+    padding: 10px 0;
+    margin: 15px 0;
+    display: none;
 }

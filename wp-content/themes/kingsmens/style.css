@@ -53,44 +53,6 @@ h4 a {
     clear: both;
 }
 
-.km-list {
-    list-style: none;
-    background: #232323;
-    margin: 0;
-    padding: 5px 20px;
-}
-
-.km-list li:not(:first-child) {
-    background: rgba(0, 0, 0, 0) url(img/dotted.png) no-repeat scroll left center;
-}
-
-.km-list li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
-    font-size: 12px;
-}
-
-.km-list li a {
-    display: block;
-}
-
-.km-list li:first-child a {
-    font-family: "Noto Sans", helvetica, sans-serif;
-    color: #ae3333;
-    font-size: 16px;
-}
-
-.km-list li:not(:first-child) a {
-    padding: 5px 20px;
-}
-
-.km-list .latest-title {
-    padding: 5px 0;
-}
-
-.km-list figure {
-    margin: 0px;
-}
-
 .entry-content p {
     margin: 0;
 }
@@ -99,7 +61,7 @@ h4 a {
     padding: 20px 20px 30px;
 }
 
-.page.content {
+.page.content:not(.gallery) {
     width: 700px;
     padding: 0;
     margin: auto;
@@ -132,6 +94,10 @@ h4 a {
     float: left;
     width: 100%;
     height: 100%;
+}
+
+#index article.post a.read-more {
+    width: auto;
 }
 
 .post,
@@ -190,7 +156,8 @@ h4 a {
     text-align: justify;
 }
 
-.post a.read-more {
+.post a.read-more,
+input[type="submit"] {
     display: table;
     -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
     -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
@@ -216,7 +183,8 @@ h4 a {
     margin-top: 10px;
 }
 
-.post a.read-more:hover {
+.post a.read-more:hover,
+input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
     background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
     background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
@@ -334,6 +302,45 @@ blockquote.right {
     width: 50%;
     text-align: left;
     vertical-align: top;
+}
+
+#notfound {
+    padding: 0 10px;
+    text-align: center;
+}
+
+#notfound h1 {
+    font-size: 4em;
+}
+
+.error404 #footer {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.content-notfound {
+    padding: 50px 0;
+}
+
+input#s {
+    padding: 6px 10px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.29) inset;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    transition: all .3s;
+    outline: none;
+    color: #828282;
+}
+
+input#s:focus {
+    box-shadow: 1px 1px 6px 0px rgba(194, 57, 23, 0.54) inset;
+}
+
+input[type="submit"] {
+    display: inline-block;
 }
 
 .gallery dl {}

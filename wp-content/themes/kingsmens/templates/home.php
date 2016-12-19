@@ -27,7 +27,7 @@ Template Name: Home
                                     <?php the_title(); ?>   
                                 </div>
                                 <div class="content">
-                                    <?php the_date(); ?>
+                                    <div class="date-post"><?php the_date(); ?></div>
                                     <?php 
                                         the_excerpt("Read more"); 
                                     ?>

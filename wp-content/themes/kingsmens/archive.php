@@ -1,12 +1,12 @@
 <?php get_header(  ) ?>
 <div class="content page">
-    <div id="main-content">
+    <div id="index">
         <div class="archive-title">
             <?php
                 if( is_tag() ):
-                    printf( __('Posts tagged: %1$s', 'kingsmen'), single_tag_title('', false));
+                    printf( __('<h2>%1$s</h2>', 'kingsmen'), single_tag_title('', false));
                 elseif( is_category() ):
-                    printf( __('Post categorize: %1$s', 'kingsmen'), single_cat_title('', false));
+                    printf( __('<h2>%1$s</h2>', 'kingsmen'), single_cat_title('', false));
                 elseif( is_day() ):
                     printf( __('Daily Archives: %1$s', 'kingsmen'), get_the_time( 'l, F j, Y' ) );
                 elseif( is_month() ):

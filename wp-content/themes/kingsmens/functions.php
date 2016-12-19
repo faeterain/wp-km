@@ -254,10 +254,10 @@ function km_get_the_excerpt($post_id) {
 if ( !function_exists('kingsmen_readmore')){
     function kingsmen_readmore()
     {
-        return '<a href="'.get_permalink( get_the_ID() ).'" class="read-more">'.__('...[Read More]','kingsmen').'</a>';
+        return '<a href="'.get_permalink( get_the_ID() ).'" class="read-more">'.__('...Read More','kingsmen').'</a>';
     }
 }
-// add_filter( 'excerpt_more', 'kingsmen_readmore' );
+add_filter( 'excerpt_more', 'kingsmen_readmore' );
 
 
 // Hien thi tag 

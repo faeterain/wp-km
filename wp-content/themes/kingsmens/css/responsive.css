@@ -37,7 +37,7 @@
         width: 100%;
     }
     .page.content {
-        width: 100%;
+        width: 100% !important;
     }
     .primary-menu {
         display: none;
@@ -46,11 +46,27 @@
 
 @media (min-width: 769px) and (max-width: 991px) {}
 
+@media (max-width: 991px) {
+    .latest-news {
+        display: block;
+    }
+    #footer {
+        text-align: center;
+    }
+    .detail-gallery-header .post .entry-header {
+        display: block;
+    }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {}
 
 @media (min-width: 992px) {
     .latest-news {
         display: none;
+    }
+    .detail-gallery-header .post {
+        padding: 0;
+        margin: 0;
     }
 }
 
