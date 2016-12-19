@@ -239,6 +239,18 @@ if ( !function_exists('kingsmen_entry_content')){
 }
 
 
+// Hien the excerpt
+
+function km_get_the_excerpt($post_id) {
+  global $post;  
+  $save_post = $post;
+  $post = get_post($post_id);
+  $output = the_excerpt();
+
+  $post = $save_post;
+  return $output;
+}
+
 if ( !function_exists('kingsmen_readmore')){
     function kingsmen_readmore()
     {
@@ -277,6 +289,10 @@ function kingsmen_style()
     wp_enqueue_style( 'reset' );
     wp_register_style( 'font', get_template_directory_uri()."/css/font.css", 'all' );
     wp_enqueue_style( 'font' );
+    wp_register_style( 'home', get_template_directory_uri()."/css/home.css", 'all' );
+    wp_enqueue_style( 'home' );
+    wp_register_style( 'responsive', get_template_directory_uri()."/css/responsive.css", 'all' );
+    wp_enqueue_style( 'responsive' );
 }
 
 add_action( 'wp_enqueue_scripts', 'kingsmen_style' );

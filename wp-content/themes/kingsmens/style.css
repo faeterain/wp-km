@@ -53,6 +53,44 @@ h4 a {
     clear: both;
 }
 
+.km-list {
+    list-style: none;
+    background: #232323;
+    margin: 0;
+    padding: 5px 20px;
+}
+
+.km-list li:not(:first-child) {
+    background: rgba(0, 0, 0, 0) url(img/dotted.png) no-repeat scroll left center;
+}
+
+.km-list li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    font-size: 12px;
+}
+
+.km-list li a {
+    display: block;
+}
+
+.km-list li:first-child a {
+    font-family: "Noto Sans", helvetica, sans-serif;
+    color: #ae3333;
+    font-size: 16px;
+}
+
+.km-list li:not(:first-child) a {
+    padding: 5px 20px;
+}
+
+.km-list .latest-title {
+    padding: 5px 0;
+}
+
+.km-list figure {
+    margin: 0px;
+}
+
 .entry-content p {
     margin: 0;
 }
@@ -310,7 +348,9 @@ blockquote.right {
 
 .gallery-caption {}
 
-.size-full {}
+.size-full {
+    width: 100%;
+}
 
 .size-large {
     width: 100%;
